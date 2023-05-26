@@ -1,0 +1,33 @@
+<template>
+    <div>
+      <el-card>
+        <div class="header">
+            列表
+        </div>
+        <div>
+            body
+        </div>
+      </el-card>
+    </div>
+  </template>
+  
+  <script>
+  // @ is an alias to /src
+  
+  
+  export default {
+    name: 'TopicListView',
+    data() {
+      return {
+
+      }
+    },
+    created(){
+      
+    },
+    methods:{
+    
+    }
+  }
+  </script>
+  
