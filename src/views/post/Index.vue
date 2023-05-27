@@ -1,7 +1,7 @@
 <template>
     <div>
       <el-card>
-        <div class="header">
+        <div slot="header">
             列表
         </div>
         <div>
