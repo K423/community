@@ -24,3 +24,10 @@ export function getUserInfo() {
     method: 'get'
   })
 }
+
+// 前台用户注销
+export function logout() {
+  return request({
+    url: '/user/logout'
+  })
+}

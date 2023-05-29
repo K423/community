@@ -1,12 +1,12 @@
 <template>
   <el-card class="box-card" shadow="never">
-    <div slot="header">
-      <span>(((((ી(･◡･)ʃ)))))</span>
+    <div slot="header" style="text-align: center;">
+      <span>⭐(((((ી(･◡･)ʃ)))))⭐</span>
     </div>
 
     <div v-if="token != null && token != ''" class="has-text-centered">
       <b-button type="is-danger" tag="router-link" :to="{ path: '/post/create' }" outlined>
-        ✍ 发表想法
+        ✍ 灵光一现
       </b-button>
     </div>
     <div v-else class="has-text-centered">
