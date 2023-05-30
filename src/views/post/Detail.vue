@@ -47,6 +47,9 @@
 
         <div class="column">
             作者信息
+            <AuthorVue v-if="flag" :user="topicUser"></AuthorVue>
+            <!--推荐-->
+            <Recommend v-if="flag" :topic-id="topic.id"></Recommend>
         </div>
     </div>
 </template>
@@ -56,8 +59,12 @@ import { deleteTopic, getTopic } from '@/api/post'
 import { mapGetters } from 'vuex'
 import Vditor from 'vditor'
 import 'vditor/dist/index.css'
+import AuthorVue from './Author.vue'
+import Recommend from './Recommend.vue'
+
 export default {
     name: 'TopicDetail',
+    components: { AuthorVue, Recommend },
     computed: {
         ...mapGetters([
             'token', 'user'

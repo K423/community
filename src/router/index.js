@@ -45,6 +45,15 @@ const routes = [{
       requireAuth: true
     }
   },
+  // 编辑
+  {
+    name: 'topic-edit',
+    path: '/post/edit/:id',
+    component: () => import('@/views/post/Edit'),
+    meta: {
+      title: '编辑'
+    }
+  },
   {
     path: '/404',
     name: '404',

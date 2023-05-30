@@ -4,7 +4,9 @@ import {
   MessageBox
 } from 'element-ui'
 import store from '@/store'
-import { getToken } from './auth'
+import {
+  getToken
+} from './auth'
 
 // 1.创建axios实例
 const service = axios.create({
