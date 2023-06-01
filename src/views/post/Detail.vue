@@ -43,6 +43,8 @@
                 </nav>
             </el-card>
 
+            <LvComments :slug="topic.id"></LvComments>
+
         </div>
 
         <div class="column">
@@ -61,10 +63,11 @@ import Vditor from 'vditor'
 import 'vditor/dist/index.css'
 import AuthorVue from './Author.vue'
 import Recommend from './Recommend.vue'
+import LvComments from '@/components/Comment/Comments'
 
 export default {
     name: 'TopicDetail',
-    components: { AuthorVue, Recommend },
+    components: { AuthorVue, Recommend, LvComments },
     computed: {
         ...mapGetters([
             'token', 'user'
