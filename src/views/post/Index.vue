@@ -6,12 +6,13 @@
           <el-tab-pane label="最新主题" name="latest">
             <article v-for="(item, index) in articleList" :key="index" class="media">
               <div class="media-left">
-                <figure class="image is-48x48">
+                <div style="width: 48px; height: 48px; display: flex; align-items: center;">
                   <!-- <img :src="`https://cn.gravatar.com/avatar/${item.userId}?s=164&d=monsterid`"
                     style="border-radius: 5px;"> -->
-                    <img :src="`https://ui-avatars.com/api/?name=${item.username}&length=3&background=random&size=164&font-size=0.33&color=random&rounded=true`"
-                    style="border-radius: 5px;">
-                </figure>
+                  <!-- <img :src="`https://ui-avatars.com/api/?name=${item.username}&length=3&background=random&size=164&font-size=0.33&color=random&rounded=true`"
+                    style="border-radius: 5px;"> -->
+                  <img :src="item.avatar" style="border-radius: 5px; width: 48px;">
+                </div>
               </div>
               <div class="media-content">
                 <div class="">
@@ -52,10 +53,9 @@
           <el-tab-pane label="热门主题" name="hot">
             <article v-for="(item, index) in articleList" :key="index" class="media">
               <div class="media-left">
-                <figure class="image is-48x48">
-                  <img :src="`https://ui-avatars.com/api/?name=${item.username}&length=3&background=random&size=164&font-size=0.33&color=random&rounded=true`"
-                    style="border-radius: 5px;">
-                </figure>
+                <div style="width: 48px; height: 48px; display: flex; align-items: center;">
+                  <img :src="item.avatar" style="border-radius: 5px; width: 48px;">
+                </div>
               </div>
               <div class="media-content">
                 <div class="">

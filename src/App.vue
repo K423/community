@@ -4,7 +4,7 @@
       <Header></Header>
     </div>
     <div class="container">
-      <router-view />
+      <router-view :key="key" />
     </div>
     <div>
       <Footer></Footer>
@@ -18,12 +18,17 @@ import Footer from './components/layout/Footer.vue';
 
 export default {
   name: "App",
-  components: { Header, Footer }
+  components: { Header, Footer },
+  computed: {
+    key() {
+      return this.$route.path + Math.random();
+    }
+  }
 }
 </script>
 
 <style scoped>
-.container{
+.container {
   min-height: 500px;
 }
 </style>
