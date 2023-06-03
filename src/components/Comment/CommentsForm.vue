@@ -40,11 +40,15 @@ export default {
             try {
                 let postData = {}
                 console.log(this.commentText)
-                postData['content'] = this.commentText
-                postData['topic_id'] = this.slug
-                await pushComment(postData)
-                this.$emit('loadComments', this.slug)
-                this.$message.success('留言成功')
+                if (this.commentText) {
+                    postData['content'] = this.commentText
+                    postData['topic_id'] = this.slug
+                    await pushComment(postData)
+                    this.$emit('loadComments', this.slug)
+                    this.$message.success('留言成功')
+                }else{
+                    this.$message.success('留言不能为空哦')
+                }
             } catch (e) {
                 this.$buefy.toast.open({
                     message: `Cannot comment this story. ${e}`,

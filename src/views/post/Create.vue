@@ -14,8 +14,8 @@
                         <!--Markdown-->
                         <div id="vditor" />
 
-                        <b-taginput v-model="ruleForm.tags" class="my-3" maxlength="15" maxtags="3" ellipsis
-                            placeholder="请输入主题标签，限制为 15 个字符和 3 个标签" />
+                        <b-taginput v-model="ruleForm.tags" class="my-3" maxlength="15" maxtags="10" ellipsis
+                            placeholder="请输入主题标签，限制为 15 个字符和 10 个标签" />
 
                         <el-form-item>
                             <el-button type="primary" @click="submitForm('ruleForm')">立即创建
