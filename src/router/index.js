@@ -42,7 +42,7 @@ const routes = [{
     component: () => import('@/views/post/Detail'),
     meta: {
       title: '文章详情',
-      requireAuth: true
+      // requireAuth: true
     }
   },
   // 编辑
@@ -51,7 +51,8 @@ const routes = [{
     path: '/post/edit/:id',
     component: () => import('@/views/post/Edit'),
     meta: {
-      title: '编辑'
+      title: '编辑',
+      requireAuth: true
     }
   },
   //标签页
@@ -87,7 +88,8 @@ const routes = [{
     path: '/member/:username/setting',
     component: () => import('@/views/user/Setting'),
     meta: {
-      title: '设置'
+      title: '设置',
+      requireAuth: true
     }
   },
   {
